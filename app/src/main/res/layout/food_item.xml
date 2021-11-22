@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2C2D2E"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/foodPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hamburguer" />
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16sp"
+        android:text="X-salada"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/foodDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40sp"
+        android:paddingRight="40sp"
+        android:paddingBottom="20sp"
+        android:text="Hambúrguer, alface, tomate,  katchup, maionese, milho  e ervilha"
+        android:textAlignment="center"
+        android:textColor="#737272"
+        android:textSize="16sp"
+        app:lineHeight="30sp" />
+
+    <TextView
+        android:id="@+id/foodPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:text="R$ 25,00"
+        android:textAlignment="textEnd"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/foodHasGluten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="50sp"
+            android:text="Contém glúten"
+            android:textColor="#737272" />
+
+        <TextView
+            android:id="@+id/foodCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10sp"
+            android:text="450 cal"
+            android:textAlignment="textEnd"
+            android:textColor="#737272" />
+    </LinearLayout>
+</LinearLayout>
