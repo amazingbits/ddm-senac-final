@@ -3,8 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#2C2D2E"
-    android:orientation="vertical">
+    android:layout_marginBottom="40sp"
+    android:background="#403F3F"
+    android:orientation="vertical"
+    android:paddingHorizontal="15sp"
+    android:paddingVertical="40sp">
 
     <ImageView
         android:id="@+id/foodPicture"
@@ -33,7 +36,7 @@
         android:paddingBottom="20sp"
         android:text="Hambúrguer, alface, tomate,  katchup, maionese, milho  e ervilha"
         android:textAlignment="center"
-        android:textColor="#737272"
+        android:textColor="#B3B1B1"
         android:textSize="16sp"
         app:lineHeight="30sp" />
 
@@ -60,9 +63,8 @@
             android:layout_weight="1"
             android:paddingLeft="10sp"
             android:paddingTop="10sp"
-            android:paddingBottom="50sp"
             android:text="Contém glúten"
-            android:textColor="#737272" />
+            android:textColor="#B3B1B1" />
 
         <TextView
             android:id="@+id/foodCalories"
@@ -72,6 +74,6 @@
             android:padding="10sp"
             android:text="450 cal"
             android:textAlignment="textEnd"
-            android:textColor="#737272" />
+            android:textColor="#B3B1B1" />
     </LinearLayout>
 </LinearLayout>

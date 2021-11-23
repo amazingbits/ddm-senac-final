@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.example.restaurante.R;
 import com.example.restaurante.adapter.FoodListAdapter;
@@ -44,6 +46,7 @@ public class FoodListActivity extends AppCompatActivity {
     private RecyclerView recyclerFoodList;
     private List<FoodModel> foodList = new ArrayList<FoodModel>();
     private FoodListAdapter adapter;
+    private RelativeLayout loadingPanel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,8 @@ public class FoodListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_list);
 
         recyclerFoodList = findViewById(R.id.recyclerFoodList);
+        loadingPanel = findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
 
         LoadJsonTask task = new LoadJsonTask();
         task.execute(Config.API_URL_JSON);
@@ -84,6 +89,7 @@ public class FoodListActivity extends AppCompatActivity {
             if(foodModels.size() > 0) {
                 adapter.swapData(foodModels);
             }
+            loadingPanel.setVisibility(View.GONE);
         }
 
         @Override
