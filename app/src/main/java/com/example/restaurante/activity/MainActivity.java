@@ -157,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             } catch (IOException | JSONException e) {
-                Log.d("ERROR", "doInBackground: " + e.getMessage());
                 return "Não foi possível carregar a lista JSON";
             }
 
